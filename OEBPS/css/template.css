@@ -1,6 +1,3 @@
-@charset "UTF-8";
-
-
 /*  ------------------------------------------------------------------------
                             
                                       AHAB!    
@@ -89,7 +86,7 @@
 
 
 /*  ----------------------------------------------
-    FONTS — @font-face, presently only works in Kindle Fire
+    FONTS — @font-face, presently only works in Kindle Fire
     ---------------------------------------------- */
     /*@font-face { 
       font-family: '[[name]]';
@@ -100,31 +97,31 @@
 /*  ----------------------------------------------
     GENERAL
     ---------------------------------------------- */
-    body { font-family: '[[name]]', serif; }
+    body { font-family: "Palatino", "Times New Roman", Caecilia, serif;}
       body.centerall { text-align: center !important; }
         body.centerall ul { list-style: none; margin: 0px !important; }
         body.centerall li { margin-left: 0px !important; }
 
     sup {  /* bug in webkit? */
-    	font-size: x-small;
-    	vertical-align: super;
-    	line-height: 1em;
+      font-size: x-small;
+      vertical-align: super;
+      line-height: 1em;
       }  
     
     sub {
-    	font-size: smaller;
-    	vertical-align: sub;
+      font-size: smaller;
+      vertical-align: sub;
       }
     
     blockquote {
-    	font-style: italic;
-    	text-align: left;
-    	text-indent: 0em;
-    	margin-top: 1em;
-    	margin-bottom: 1em;
-    	margin-right: 1em;
-    	margin-left: 1em;  /*  sometimes I find we need to 
-    	                       explicitly define all the margins independently ... */
+      font-style: italic;
+      text-align: left;
+      text-indent: 0em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-right: 1em;
+      margin-left: 1em;  /*  sometimes I find we need to 
+                             explicitly define all the margins independently ... */
       }
 
     p { text-indent: 2em; margin: 0px; }
@@ -146,7 +143,7 @@
     IMAGES
     ---------------------------------------------- */
     img {
-    	max-width: 100%; /* kindlegen throws a warning */
+      max-width: 100%; /* kindlegen throws a warning */
       }                /* on this but I find it actually */ 
                        /* has material impact on the output */
 
@@ -176,7 +173,7 @@
       figure img { border: 3px double #bbb; }
     
     figcaption { 
-      font-family: '[[name]]', helvetica, sans-serif, serif;
+      font-family: helvetica, sans-serif, serif;
       text-align: left; 
       font-size: .6em; 
       text-transform: uppercase; 
@@ -202,3 +199,39 @@
     h3 { font-size: 1.2em; letter-spacing: 1px; text-transform: uppercase; }
     h4 { font-size: 1.2em; }
     h5 { font-size: 1.1em; }
+
+/*  ----------------------------------------------
+    CUSTOM
+    ---------------------------------------------- */
+p.Basic-Paragraph {
+  -epub-ruby-position:over;
+  color:#231f20;
+  font-size:0.917em;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:500;
+  line-height:1.509;
+  margin-bottom:8px;
+  margin-left:0px;
+  margin-right:0px;
+  text-align:left;
+  text-decoration:none;
+  text-indent:0px;
+}
+p.Landscape {
+  -epub-hyphens:none;
+  -epub-ruby-position:over;
+  -webkit-hyphens:none;
+  color:#231f20;
+  font-size:0.917em;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:500;
+  line-height:1.509;
+  margin-bottom:8px;
+  margin-left:24px;
+  margin-right:0px;
+  text-align:left;
+  text-decoration:none;
+  text-indent:-24px;
+}
